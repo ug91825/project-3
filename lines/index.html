@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Joe Zeng :: Color Lines</title>
+<link rel="stylesheet" href="http://joezeng.com/global.css">
+<link rel="stylesheet" href="designer.css">
+<script type="text/javascript" src="game.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127624903-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-127624903-2');
+	</script>
+	
+	<script src="/res/ga_links.js"></script>
+
+</head>
+
+
+<body onload="load_everything()" style="margin: 20px;">
+
+<a href="..">Back to Games</a>
+
+<div id="gamebox">
+	
+	<canvas id="ballbox" width="360" height="360"> </canvas>
+	
+	<div id="infobox">
+
+		<div id="scorebox">
+			<span id="scoredisp">0</span>
+			<div style="position: absolute; top: 44px; left: 6px; font-size: 10px;">SCORE</div>
+		</div>
+
+		<div id="nextbox">
+			<div id="next1"><img id="nextball1" src="ball-null.png"/></div>
+			<div id="next2"><img id="nextball2" src="ball-null.png"/></div>
+			<div id="next3"><img id="nextball3" src="ball-null.png"/></div>
+			<div style="position: absolute; top: 36px; left: 6px; font-size: 10px;">NEXT</div>
+			<canvas id="timerbar" width="100" height="1"></canvas>
+		</div>
+
+		<div id="menubox">
+			<p onclick="open_help()">Help</p>
+			<p onclick="open_about()">About</p>
+			<p onclick="open_settings()">Settings</p>
+			<p onclick="reset_board()">New Game</p>
+			<p><a href="http://ko-fi.com/joezeng" onclick="kofi_link()">Buy me a Ko-fi?</a></p>
+		</div>
+
+		<div id="debugbox">
+		</div>
+
+		<div id="captionbox">
+			Lines v.0.8.78<br />
+			&copy; 2012 Joe Zeng.
+		</div>
+
+	</div>
+
+	<div id="helpbox">
+		<h3>How to Play</h3>
+		<p>In this game, the objective is to move balls around and line five or more of them in a row. Click on a ball, then click on an empty space to move it there.</p>
+		<p>Every time you move a ball, three new balls will appear. But if you line up five balls, they will disappear. The game is over when the board fills up.</p>
+		<div id="helpbox_closebutton" onclick="close_help();">
+			<table style="width: 100%; height: 100%; text-align:center;"><tr><td>Close</td></tr></table>
+		</div>
+	</div>
+
+	<div id="aboutbox">
+		<h3>About</h3>
+		<p>Color Lines is my first game programmed in HTML 5.</p>
+
+		<p>Special thanks to Olena Strelkovska (my high school CS teacher) for giving me the assignment that made me make this game in the first place &ndash; first in Visual Basic, then in C++ with SFML, and now in HTML 5.</p>
+		<div id="aboutbox_closebutton" onclick="close_about();">
+			<table style="width: 100%; height: 100%; text-align:center;"><tr><td>Close</td></tr></table>
+		</div>
+	</div>
+
+	<div id="settingbox">
+		<h3>Settings</h3>
+
+			<table style="width: 100%;">
+				<tr>
+					<td>Speed</td>
+					<td><input type="range" min="0" max="200" value="100" onchange="move_secs = 0.32 / Math.pow(2, this.value / 50);"/></td>
+				</tr>
+				<tr>
+					<td>Jerkiness</td>
+					<td><input type="range" min="0" max="100" value="75" onchange="jerkiness = this.value / 100;"/></td>
+				</tr>
+			</table>
+
+			<table style="width: 100%;">
+				<tr>
+					<td>Game Type</td>
+					<td>[currently unavailable]</td>
+				</tr>
+			</table>
+
+		<div id="settingbox_closebutton" onclick="close_settings();">
+			<table style="width: 100%; height: 100%; text-align:center;"><tr><td>Close</td></tr></table>
+		</div>
+	</div>
+
+	<div id="gameoverbox">
+		<table style="width: 100%; height:100%;">
+			<tr><td style="text-align:center;">
+				Game Over
+			</td></tr>
+		</table>
+	</div>
+
+	<div id="titlebox">
+		<table style="width: 100%; height: 100%;">
+			<tr><td style="text-align:center; font-size: 48px;">
+				Color Lines
+			</td></tr>
+		</table>
+	</div>
+
+</div>
+
+</body>
+
+</html>

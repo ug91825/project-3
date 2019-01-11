@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Joe Zeng :: Number Drop</title>
+<link rel="stylesheet" href="http://joezeng.com/global.css">
+<link rel="stylesheet" href="designer.css">
+<script type="text/javascript" src="sprintf.js"></script>
+<script type="text/javascript" src="game.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127624903-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-127624903-2');
+	</script>
+	
+	<script src="/res/ga_links.js"></script>
+
+</head>
+
+
+<body onload="load_everything()" style="margin: 20px;">
+
+<a href="..">Back to Games</a>
+
+<div id="gamebox">
+	
+	<canvas id="numberbox" width="280" height="480"></canvas>
+	
+	<div id="gameoverbox">
+		GAME<br />OVER
+	</div>
+
+	<div id="infobox">
+
+		<div id="scorebox">
+			<span id="scoredisp">0</span>
+			<div style="position: absolute; top: 44px; left: 6px; font-size: 10px;">SCORE</div>
+		</div>
+
+		<div id="timebox">
+			<span id="timedisp">0:00</span>
+			<div style="position: absolute; top: 44px; left: 6px; font-size: 10px;">TIME</div>
+		</div>
+
+		<div id="menubox">
+			<p onclick="open_help()">Help</p>
+			<p onclick="open_about()">About</p>
+			<p onclick="open_settings()">Settings</p>
+			<p onclick="reset_board()">New Game</p>
+			<p><a href="http://ko-fi.com/joezeng" onclick="kofi_link()">Buy me a Ko-fi?</a></p>
+		</div>
+		
+		<div id="drop" onclick="drop_numbers()">
+			DROP
+		</div>
+		
+		<div id="reset" onclick="reset_numbers()">
+			RESET
+		</div>
+		
+		
+		<div id="debugbox">
+		</div>
+
+		<div id="captionbox">
+			Number Drop<br />
+			&copy; 2012-2013 Joe Zeng.
+		</div>
+
+	</div>
+
+	<div id="helpbox">
+		<h3>How to Play</h3>
+		<p>In this game, the objective is to create valid equations on the equation line, and send them out in order to fill up your energy bar.</p>
+		<p>To do this, click on each column to advance its numbers or symbols down one space, and do this until you get an equation that's mathematically correct. Then, click DROP. Then, any numbers on the bottom row will be destroyed, while any numbers on the second row will be returned to the top of the column.</p>
+		<p>The round is over once no more moves are available or when time runs out. If you've filled up the energy bar by this point, you move on to the next round. Otherwise, it's game over.</p>
+		<p>If you get stuck, press RESET. This will drop all the numbers in the bottom row and return all the numbers in the second row to the top. However, this costs 5 seconds of your time, so don't use it too much!</p>
+		<div id="helpbox_closebutton" onclick="close_help();">
+			<table style="width: 100%; height: 100%; text-align:center;"><tr><td>Close</td></tr></table>
+		</div>
+	</div>
+
+	<div id="aboutbox">
+		<h3>About</h3>
+		<p>This is a game from an old edition of Math Blaster that I had when I was maybe 7 or 8 years old. I've lost the original copy, but I thought I'd make an HTML5 version of the game (with smoother animations!) for everyone to enjoy.</p>
+		<div id="aboutbox_closebutton" onclick="close_about();">
+			<table style="width: 100%; height: 100%; text-align:center;"><tr><td>Close</td></tr></table>
+		</div>
+	</div>
+
+	<div id="settingbox">
+		<h3>Settings</h3>
+
+			<table style="width: 100%;">
+				<tr>
+					<td>Game Type</td>
+					<td>[currently unavailable]</td>
+				</tr>
+			</table>
+
+		<div id="settingbox_closebutton" onclick="close_settings();">
+			<table style="width: 100%; height: 100%; text-align:center;"><tr><td>Close</td></tr></table>
+		</div>
+	</div>
+
+</div>
+
+</body>
+
+</html>

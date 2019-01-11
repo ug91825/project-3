@@ -1,0 +1,40 @@
+@import url("webfont.css");
+
+html, body {
+	background-color: black;
+	color: white;
+	font-family: "Determination Sans", Fixedsys, sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	text-align: center;
+}
+
+#crab_rave {
+	display: inline-block;
+	position: relative;
+	margin-top: 40px;
+	width: 640px;
+	height: 320px;
+	overflow: hidden;
+}
+
+#gif {
+	position: absolute;
+	top: 40px;
+	left: 0px
+}
+
+#caption {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40px;
+	z-index: 4;
+	font-size: 60px;
+	text-shadow: 2px 2px black;
+}
+
+@font-face {
+    font-family: 'Determination Sans';
+    src: url('DeterminationMonoWeb.woff') format('woff');
+}

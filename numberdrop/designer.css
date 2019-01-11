@@ -1,0 +1,188 @@
+html, body{cursor: default;}
+
+/* Text */
+
+#metatext{
+	
+	padding: 0px 20px;
+	
+}
+
+
+
+#gamebox{
+	width: 560px;
+	height: 520px;
+	margin: auto;
+/*	border: 1px solid black; */
+	position: relative;
+}
+
+#numberbox{
+	position: relative;
+	width: 280px;
+	height: 480px;
+	left: 20px;
+	top: 20px;
+}
+
+#infobox{
+	position:absolute;
+	left: 320px;
+	top: 10px;
+	bottom: 10px;
+	right: 20px;
+}
+
+#scorebox{
+	position: absolute;
+	left: 0px;
+	top: 20px;
+	width: 180px;
+	height: 42px;
+	border-bottom: 1px solid black;
+}
+
+#scoredisp, #timedisp{
+	font-weight:bold;
+	font-size: 40px;
+}
+
+#timebox{
+	position: absolute;
+	left: 0px;
+	top: 85px;
+	width: 180px;
+	height: 42px;
+	border-bottom: 1px solid black;
+}
+
+#menubox{
+	position: absolute;
+	top: 160px;
+	left: 0px;
+	font-size: 18px;
+}
+	#menubox p{ margin: 0.2em 0em 0.2em; cursor: pointer; }
+	#menubox p:hover{ color: #c9c9ef;}
+
+#debugbox{
+	position: absolute;
+	top: 260px;
+	left: 0px;
+	font-size: 10px;
+}
+
+#captionbox{
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	font-size: 12px;
+}
+
+#gameoverbox{
+	position: absolute;
+	top: 120px;
+	left: 40px;
+	width: 240px;
+	height: 160px;
+	font-size: 60px;
+	text-align: center;
+	display: none;
+}
+
+#helpbox{
+	position: absolute;
+	width: 360px;
+	height: 320px;
+	left: 80px;
+	top: 80px;
+	border: 1px solid black;
+	background: #ffffff;
+	padding: 20px;
+	display: none;
+	z-index: 1;
+}
+	#helpbox h3{ margin: 0 0 0.2em; }
+	#helpbox p{ font-size: 12px; }
+	#helpbox_closebutton{
+		position:absolute;
+		right:20px; bottom: 20px;
+		width:60px; height: 30px;
+		border: 1px solid black;
+		cursor: pointer;
+	}
+
+#aboutbox{
+	position: absolute;
+	width: 360px;
+	height: 200px;
+	left: 80px;
+	top: 80px;
+	border: 1px solid black;
+	background: #ffffff;
+	padding: 20px;
+	display: none;
+	z-index: 1;
+}
+	#aboutbox h3{ margin: 0 0 0.2em; }
+	#aboutbox p{ font-size: 12px; }
+	#aboutbox_closebutton{
+		position:absolute;
+		right:20px; bottom: 20px;
+		width:60px; height: 30px;
+		border: 1px solid black;
+		cursor: pointer;
+	}
+
+#settingbox{
+	position: absolute;
+	width: 360px;
+	height: 200px;
+	left: 80px;
+	top: 80px;
+	border: 1px solid black;
+	background: #ffffff;
+	padding: 20px;
+	display: none;
+	z-index: 1;
+}
+	#settingbox h3{ margin: 0 0 0.2em; }
+	#settingbox table{ font-size: 12px; }
+	#settingbox_closebutton{
+		position:absolute;
+		right:20px; bottom: 20px;
+		width:60px; height: 30px;
+		border: 1px solid black;
+		cursor: pointer;
+	}
+
+	
+	
+	
+	
+#drop{
+	position: absolute;
+	
+	border: 1px solid black;
+	width: 80px;
+	text-align: center;
+	padding: 9px;
+	
+	top: 330px;
+	
+	cursor: pointer;
+}
+
+#reset{
+	position: absolute;
+	
+	border: 1px solid black;
+	width: 80px;
+	text-align: center;
+	padding: 9px;
+	
+	top: 380px;
+	
+	cursor: pointer;
+}

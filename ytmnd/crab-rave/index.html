@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>CRAB RAVE</title>
+	<link rel="stylesheet" href="css/undertale.css" />
+	<script src="howler.js"></script>
+	<script src="crab-rave.js"></script>
+	<script src="querystring.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127624903-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-127624903-2');
+	</script>
+</head>
+
+<body>
+
+	<div id="crab_rave">
+		<img id="gif" src="crab-rave.gif">
+		<p id="caption"></p>
+	</div>
+	<br>
+	<span id="speed">speed: 100%</span>
+
+	<script>
+		var caption = "CRAB RAVE";
+		var query = simpleQueryString.parse(window.location.search);
+		if (query.caption) {
+			caption = query.caption;
+			document.getElementById("caption").innerText = query.caption;
+		}
+		document.title = caption;
+		run();
+	</script>
+
+</body>
+
+</html>
