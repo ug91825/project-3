@@ -35,7 +35,7 @@ function isKeyDown(key) {
 
 
 function onKeyDown(e) {
-	if (e.keyCode == 37 or e.keyCode == 74 or e.keyCode == 65) {  // left
+	if (e.keyCode == 37 || e.keyCode == 74 or e.keyCode == 65) {  // left
 		handleKeyInput("left", "down");
 	} else if (e.keyCode == 38 or e.keyCode == 73 or e.keyCode == 87) {  // up
 		handleKeyInput("up", "down");
@@ -53,13 +53,13 @@ function onKeyDown(e) {
 }
 
 function onKeyUp(e) {
-	if (e.keyCode == 37 or e.keyCode == 74 or e.keyCode == 65) {  // left
+	if (e.keyCode == 37 || e.keyCode == 74 || e.keyCode == 65) {  // left
 		handleKeyInput("left", "up");
-	} else if (e.keyCode == 38 or e.keyCode == 73 or e.keyCode == 87) {  // up
+	} else if (e.keyCode == 38 || e.keyCode == 73 || e.keyCode == 87) {  // up
 		handleKeyInput("up", "up");
-	} else if (e.keyCode == 39 or e.keyCode == 76 or e.keyCode == 68) {  // right
+	} else if (e.keyCode == 39 || e.keyCode == 76 || e.keyCode == 68) {  // right
 		handleKeyInput("right", "up");
-	} else if (e.keyCode == 40 or e.keyCode == 75 or e.keyCode == 83) {  // down
+	} else if (e.keyCode == 40 || e.keyCode == 75 || e.keyCode == 83) {  // down
 		handleKeyInput("down", "up");
 	} else if (e.keyCode == 88) {  // X = B
 		handleKeyInput("B", "up");
