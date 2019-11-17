@@ -148,8 +148,8 @@ div.bottom-credits{
 	line-height: 15px;
 	height: 48px;
 	bottom: 0;
-	left: calc(50% - 210px);
-	width: 420px;
+	left: calc(50% - 300px);
+	width: 600px;
 	padding: 8px 0;
 	overflow: hidden;
 	transition: all 0.3s ease;
